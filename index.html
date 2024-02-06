@@ -6,7 +6,26 @@
     <title>Tell Me What Happened</title>
 </head>
 <body>
-    <div class="nyt" id="nyt">
+    <header id="header">
+        <h1> Tell Me What Happened!</h1>
+        <search class="search-bar">
+            <div class="year">
+                <form action="" method="get">
+                    <input type="search" placeholder="Search" name="search">
+                    <button type="submit"><i class="search-button">Year</i></button>
+                </form>
+            </div>
+            <div class="month">
+                <div id="myDropdown" class="dropdown-content">
+                    <input type="search" placeholder="Month" id="myInput">
+                    <button type="submit" class="dropbtn">Month</button>
+                  
+                </div>
+            </div>
+        </search>
+    </header>
+  
+  <div class="nyt" id="nyt">
         <h1>New York Times Articles from [date]:</h1>
         <div class="story" id="story1">
             <h2 class="headline" id="headline1">Headline</h2>
