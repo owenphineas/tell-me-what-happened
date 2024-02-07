@@ -4,38 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
     <title>Tell Me What Happened</title>
 </head>
 <body>
-    <header id="header">
-        <h1 class="font-bold underline"> Tell Me What Happened!</h1>
-        <search class="search-bar">
-            <div>
+    <header id="header" class="shadow-lg bg-white rounded-lg ">
+        <h1 class="font-bold font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
+        <search class="flex search-bar justify-center">
+            <div class="mb-10 border-2 border-green-700 border-solid rounded-md">
                 <form action="" method="get">
                     <input type="date" placeholder="Search" name="year" id="year">
                 </form>
             </div>
-                <!-- <div class="month">
-                <button type="select" id="month-select">select</button>
-                    <label for="month" class="dropdown-content"></label>
-                    <select action="" method="get" required>
-                    <input type="search" placeholder="Month" name="month-search">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select>  
-                </div>-->
+            <div class="mb-10 ml-5 border-2 border-green-700 border-solid rounded-md">
+                <button type="submit"><i class="search-button">Submit</i></button>
             </div>
-            <button type="submit"><i class="search-button">Submit</i></button>
         </search>
     </header>
   
