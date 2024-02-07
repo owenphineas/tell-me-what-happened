@@ -3,30 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
     <title>Tell Me What Happened</title>
 </head>
 <body>
-    <header id="header">
-        <h1> Tell Me What Happened!</h1>
-        <search class="search-bar">
-            <div class="year">
+    <header id="header" class="shadow-lg bg-white rounded-lg ">
+        <h1 class="font-bold font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
+        <search class="flex search-bar justify-center">
+            <div class="mb-10 border-2 border-green-700 border-solid rounded-md">
                 <form action="" method="get">
-                    <input type="search" placeholder="Search" name="search">
-                    <button type="submit"><i class="search-button">Year</i></button>
+                    <input type="date" placeholder="Search" name="year" id="year">
                 </form>
             </div>
-            <div class="month">
-                <div id="myDropdown" class="dropdown-content">
-                    <input type="search" placeholder="Month" id="myInput">
-                    <button type="submit" class="dropbtn">Month</button>
-                  
-                </div>
+            <div class="mb-10 ml-5 border-2 border-green-700 border-solid rounded-md">
+                <button type="submit"><i class="search-button">Submit</i></button>
             </div>
         </search>
     </header>
   
   <div class="nyt" id="nyt">
-        <h1>New York Times Articles from [date]:</h1>
+        <div class="nyt" id="nyt">
+          <h1 id="title">New York Times Articles from [date]:</h1>
         <div class="story" id="story1">
             <h2 class="headline" id="headline1">Headline</h2>
             <p class="blurb" id="blurb1">blurb</p>
@@ -71,5 +75,8 @@
         <h2 class="title" id="title5">Article Title</h2>
         <p class="summary" id="summary5">Summary</p>
     </div>
+</div>   
+
+<script src="Develop/script.js"></script>
 </body>
 </html>
