@@ -29,13 +29,3 @@ function getNYT() {
 
 // TO DO: add event listener to search button that executes getNYT()
 
-
-let monthDropDown = document.getElementById('#month-select');
-let selectYearEl = document.getElementById('#year');
-
-// function showDropDown() {
-//     document.getElementById().classList.toggle("show");
-//   }
-
-
-//         monthDropDown.addEventListener('click', showDropDown);
