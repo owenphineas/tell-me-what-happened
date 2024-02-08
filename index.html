@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./develop/css/style.css" />
     <style type="text/tailwindcss">
         @layer utilities {
           .content-auto {
@@ -14,42 +15,44 @@
     <title>Tell Me What Happened</title>
 </head>
 <body>
-    <header id="header" class="shadow-lg bg-white rounded-lg ">
-        <h1 class="font-bold font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
-        <search class="flex search-bar justify-center">
-            <div class="mb-10 border-2 border-green-700 border-solid rounded-md">
-                <form action="" method="get">
-                    <input type="date" placeholder="Search" name="year" id="year">
+    <header id="header" class="shadow-lg bg-white rounded-lg mb-10">
+        <h1 id="title" class="font-bold font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
+        <search class="flex justify-center">
+                <form id="search-bar" action="" method="get">
+                    <div class="mb-10 border-2 border-green-700 border-solid rounded-md">
+                    <input id="date" type="date" placeholder="Search" name="year">
+                    </div>
+                    <div class="mb-10 ml-5 border-2 border-green-700 border-solid rounded-md text-center">
+                        <button id="search-button" type="submit"><i >Submit</i></button>
+                    </div>
                 </form>
-            </div>
-            <div class="mb-10 ml-5 border-2 border-green-700 border-solid rounded-md">
-                <button type="submit"><i class="search-button">Submit</i></button>
-            </div>
         </search>
     </header>
   
-  <div class="nyt" id="nyt">
+    <section id="newspaper" class="hide">
         <div class="nyt" id="nyt">
-          <h1 id="title">New York Times Articles from [date]:</h1>
-        <div class="story" id="story1">
-            <h2 class="headline" id="headline1">Headline</h2>
-            <p class="blurb" id="blurb1">blurb</p>
-        </div>
-        <div class="story" id="story2">
-            <h2 class="headline" id="headline2">Headline</h2>
-            <p class="blurb" id="blurb2">blurb</p>
-        </div>
-        <div class="story" id="story3">
-            <h2 class="headline" id="headline3">Headline</h2>
-            <p class="blurb" id="blurb3">blurb</p>
-        </div>
-        <div class="story" id="story4">
-            <h2 class="headline" id="headline4">Headline</h2>
-            <p class="blurb" id="blurb4">blurb</p>
-        </div>
-        <div class="story" id="story5">
-            <h2 class="headline" id="headline5">Headline</h2>
-            <p class="blurb" id="blurb5">blurb</p>
+            <div class="nyt" id="nyt">
+                <h1 id="title">New York Times Articles from [date]:</h1>
+            <div class="story" id="story1">
+                <h2 class="headline" id="headline1">Headline</h2>
+                <p class="blurb" id="blurb1">blurb</p>
+            </div>
+            <div class="story" id="story2">
+                <h2 class="headline" id="headline2">Headline</h2>
+                <p class="blurb" id="blurb2">blurb</p>
+            </div>
+            <div class="story" id="story3">
+                <h2 class="headline" id="headline3">Headline</h2>
+                <p class="blurb" id="blurb3">blurb</p>
+            </div>
+            <div class="story" id="story4">
+                <h2 class="headline" id="headline4">Headline</h2>
+                <p class="blurb" id="blurb4">blurb</p>
+            </div>
+            <div class="story" id="story5">
+                <h2 class="headline" id="headline5">Headline</h2>
+                <p class="blurb" id="blurb5">blurb</p>
+            </div>
         </div>
     </div>
 
@@ -78,5 +81,7 @@
 </div>   
 
 <script src="Develop/script.js"></script>
+    </section>
+    <script src="Develop/script.js"></script>
 </body>
 </html>
