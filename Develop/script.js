@@ -40,10 +40,21 @@ function submitDate(event){
 
 searchBtn.addEventListener('click', function(){
     headerEl.classList.remove('shadow-lg');
+    headerEl.classList.add('max-h-40');
     titleEl.classList.remove('text-5xl');
     titleEl.classList.add('text-3xl');
     newsSection.classList.remove('hide');
+    wiki.classList.remove('hide');
     
 });
 
 searchBtn.addEventListener('click', submitDate);
+
+//Saved Article section
+let saved = document.getElementById('saveThis');
+
+  function store(){
+    //Will I need a prevent default here?
+     var inputItem= document.getElementById('saveThis');
+     localStorage.setItem('saveThis', inputItem.value);
+    }

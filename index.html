@@ -15,7 +15,7 @@
     <title>Tell Me What Happened</title>
 </head>
 <body>
-    <header id="header" class="shadow-lg bg-white rounded-lg mb-10">
+    <section id="header" class="shadow-lg bg-white rounded-lg mb-10">
         <h1 id="title" class="font-bold font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
         <search class="flex justify-center">
                 <form id="search-bar" action="" method="get">
@@ -27,7 +27,7 @@
                     </div>
                 </form>
         </search>
-    </header>
+    </section>
   
     <section id="newspaper" class="hide">
         <div class="nyt" id="nyt">
@@ -80,12 +80,18 @@
     </div>
 </div>   
 
-<section id="savedResults" class="float-right text-green-800 text-center ">
-    <div>
-        <button id="savedResultsBtn" type="submit" class="font-bold"><i> Saved Articles</i></button>
-    </div>
+<section id="savedResults" class="text-green-800 text-center">
+    <form action="https://duckduckgo.com/">
+        <button id="savedResultsBtn" type="submit" class="grow font-bold"><i> Saved Articles</i></button>
+    </form>
 </section>
 
+<section >
+    <button id="saveThis" onclick="store()" type="button" class="hide">Save</button>
+<div id="savedContainer">
+
+</div>
+</section>
 
 <script src="Develop/script.js"></script>
     <script src="Develop/script.js"></script>
