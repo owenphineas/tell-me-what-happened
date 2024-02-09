@@ -15,8 +15,13 @@
     <title>Tell Me What Happened</title>
 </head>
 <body>
-    <section id="header" class="shadow-lg bg-white rounded-lg mb-10">
-        <h1 id="title" class="font-bold font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
+    <section id="header" class="w-full shadow-lg bg-white rounded-lg mb-10 absolute">
+        <section id="savedResults" class="relative float-right mr-10 mt-5 text-green-800 text-center">
+            <form action="https://duckduckgo.com/">
+                <button id="savedResultsBtn" type="submit" class="grow font-bold"><i> Saved Articles</i></button>
+            </form>
+        </section>
+        <h1 id="title" class="font-bold clear-right font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
         <search class="flex justify-center">
                 <form id="search-bar" action="" method="get">
                     <div class="mb-10 border-2 border-green-400 border-solid rounded-md">
@@ -27,6 +32,7 @@
                     </div>
                 </form>
         </search>
+        
     </section>
   
     <section id="newspaper" class="hide">
@@ -80,11 +86,7 @@
     </div>
 </div>   
 
-<section id="savedResults" class="text-green-800 text-center">
-    <form action="https://duckduckgo.com/">
-        <button id="savedResultsBtn" type="submit" class="grow font-bold"><i> Saved Articles</i></button>
-    </form>
-</section>
+
 
 <section >
     <button id="saveThis" onclick="store()" type="button" class="hide">Save</button>
