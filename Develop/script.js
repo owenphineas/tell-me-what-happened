@@ -45,3 +45,37 @@ searchBtn.addEventListener('click', function(){
     newsSection.classList.remove('hide');
 
 });
+
+// Wikipedia API function
+function getWikipediaPages(event) {
+    event.preventDefault();
+    // Get the selected date from user input
+    let searchDate = dateInputEl.value;
+    let [year, month, day] = searchDate.split('-');
+    let formattedDate = year + month + day;
+    console.log('Fetching Wikipedia pages for date:', formattedDate);
+    // Fetch Wikipedia pages for specified date
+    fetch(`https://en.wikipedia.org/w/api.php?action=query&list=random&rnlimit=5&rnnamespace=0&format=json&origin=*`)
+        .then(response => response.json())
+        .then(data => {
+            let pageIds = data.query.random.map(page => page.id);
+            // Fetch Wikipedia page information
+            return Promise.all(pageIds.map(pageId => fetch(`https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext&format=json&pageids=${pageId}&origin=*`)));
+        })
+        .then(responses => Promise.all(responses.map(response => response.json())))
+        .then(pagesData => {
+            pagesData.forEach((pageData, index) => {
+                let page = pageData.query.pages[Object.keys(pageData.query.pages)[0]];
+                let articleElement = document.getElementById(`article${index + 1}`);
+                articleElement.querySelector('.title').textContent = page.title;
+                articleElement.querySelector('.summary').textContent = page.extract;
+            });
+            console.log('Wikipdeia pages: ', pagesData);
+        })
+        .catch(error => {
+            console.error('Error fetching Wikipedia pages:', error);
+        });
+}
+
+// Event listener for search button to fetch Wikipedia pages
+searchBtn.addEventListener('click', getWikipediaPages);
