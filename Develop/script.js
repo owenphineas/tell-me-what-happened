@@ -5,14 +5,15 @@ let headerEl = document.querySelector('#header');
 let titleEl = document.querySelector('#title');
 let newsSection = document.querySelector('#newspaper');
 document.querySelector("#date").value.replaceAll('-', '');
+
 //  NYT API KEY: ca099Snk2Kugzxo0Gc84kVoreQgmVbiT
+
 
 function getNYT(event) {
     event.preventDefault();
     // TO DO: set year, month, and day variables to the selected value
-    let year = '1970';
-    let month = '12';
-    let day = '15';
+    
+    //year = dateInputEl;
     console.log('hello');
     // Searches for headlines labeled as "news" if the search is post-1980 (non archival)
     if(year < 1981) {
@@ -20,7 +21,7 @@ function getNYT(event) {
     } else {
         newsType = "&facet=true&facet_fields=type_of_material&fq=news"
     };
-
+    
     let nytURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=" + year + month + day + "&end_date=" + year + month + day + newsType + "&page=1&sort=relevance&api-key=ca099Snk2Kugzxo0Gc84kVoreQgmVbiT";
     fetch(nytURL)
     .then(function (response) {
@@ -36,7 +37,10 @@ function getNYT(event) {
 }
 
 
+
+
 searchBtn.addEventListener('click', getNYT);
+
 
 searchBtn.addEventListener('click', function(){
     headerEl.classList.remove('shadow-lg');
