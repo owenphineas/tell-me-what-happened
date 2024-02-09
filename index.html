@@ -19,10 +19,10 @@
         <h1 id="title" class="font-bold font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
         <search class="flex justify-center">
                 <form id="search-bar" action="" method="get">
-                    <div class="mb-10 border-2 border-green-700 border-solid rounded-md">
+                    <div class="mb-10 border-2 border-green-400 border-solid rounded-md">
                     <input id="date" type="date" placeholder="Search" name="year">
                     </div>
-                    <div class="mb-10 ml-5 border-2 border-green-700 border-solid rounded-md text-center">
+                    <div class="mb-10 ml-5 border-2 border-green-400 border-solid rounded-md text-center">
                         <button id="search-button" type="submit"><i >Submit</i></button>
                     </div>
                 </form>
@@ -54,34 +54,40 @@
                 <p class="blurb" id="blurb5">blurb</p>
             </div>
         </div>
-    </div>
+    </section>
 
- <div class="wiki" id="wiki"
+ <div class="wiki hide" id="wiki">
         <div><h1>Wikipedia Section for [date]:</h1></div>
-        <div class="article" id="article1"
+        <div class="article" id="article1">
         <h2 class="title" id="title1">Article Title</h2>
         <p class="summary" id="summary1">Summary</p>
     </div>
-    <div class="article" id="article2"
+    <div class="article" id="article2">
         <h2 class="title" id="title2">Article Title</h2>
         <p class="summary" id="summary2">Summary</p>
     </div>
-    <div class="article" id="article3"
+    <div class="article" id="article3">
         <h2 class="title" id="title3">Article Title</h2>
         <p class="summary" id="summary3">Summary</p>
     </div>
-    <div class="article" id="article4"
+    <div class="article" id="article4">
         <h2 class="title" id="title4">Article Title</h2>
         <p class="summary" id="summary4">Summary</p>
     </div>
-    <div class="article" id="article5"
+    <div class="article" id="article5">
         <h2 class="title" id="title5">Article Title</h2>
         <p class="summary" id="summary5">Summary</p>
     </div>
 </div>   
 
+<section id="savedResults" class="float-right text-green-800 text-center ">
+    <div>
+        <button id="savedResultsBtn" type="submit" class="font-bold"><i> Saved Articles</i></button>
+    </div>
+</section>
+
+
 <script src="Develop/script.js"></script>
-    </section>
     <script src="Develop/script.js"></script>
 </body>
 </html>

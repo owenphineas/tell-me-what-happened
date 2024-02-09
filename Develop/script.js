@@ -32,13 +32,18 @@ function getNYT(event) {
     })
 }
 
-
-searchBtn.addEventListener('click', getNYT);
+function submitDate(event){
+    event.preventDefault();
+    getNYT();
+    getWikipediaPages();
+};
 
 searchBtn.addEventListener('click', function(){
     headerEl.classList.remove('shadow-lg');
     titleEl.classList.remove('text-5xl');
     titleEl.classList.add('text-3xl');
     newsSection.classList.remove('hide');
-
+    
 });
+
+searchBtn.addEventListener('click', submitDate);
