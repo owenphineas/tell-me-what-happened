@@ -34,6 +34,16 @@ function getNYT(event) {
         }
     })
 }
+
+searchBtn.addEventListener('click', getNYT);
+
+searchBtn.addEventListener('click', function(){
+    headerEl.classList.remove('shadow-lg');
+    titleEl.classList.remove('text-5xl');
+    titleEl.classList.add('text-3xl');
+    newsSection.classList.remove('hide');
+
+});
 // Wikipedia API Function
 function getWikipediaPages(event) {
     event.preventDefault();
