@@ -50,11 +50,36 @@ searchBtn.addEventListener('click', function(){
 
 searchBtn.addEventListener('click', submitDate);
 
-//Saved Article section
-let saved = document.getElementById('saveThis');
+// Saved Article section
+// let saved = document.getElementById('saveThis');
 
-  function store(){
-    //Will I need a prevent default here?
-     var inputItem= document.getElementById('saveThis');
-     localStorage.setItem('saveThis', inputItem.value);
+//   function store(){
+//     Will I need a prevent default here?
+//      var inputItem= document.getElementById('saveThis');
+//      localStorage.setItem('saveThis', inputItem.value);
+//     };
+
+var modal = document.getElementById('savedResults');
+var modalBtn = document.getElementById('savedResultsBtn');
+var span = document.getElementById('close');
+
+modalBtn.addEventListener('click', function(){
+    modal.classList.remove('hide');
+    modal.classList.add('block');
+});
+
+span.addEventListener('click', function() {
+    modal.style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
     }
+});
+
+
+
+
+
+
