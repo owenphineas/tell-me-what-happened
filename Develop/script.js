@@ -48,6 +48,48 @@ searchBtn.addEventListener('click', function(){
     
 });
 
+// Wikipedia API function
+function getWikipediaPages(event) {
+    event.preventDefault();
+    // Get the selected date from user input
+    let searchText = dateInputEl.value.trim();
+    console.log('Fetching Wikipedia pages for:', searchText);
+    if (searchText === '') {
+        console.log('Search text empty. Please enter valid date.');
+        return;
+    }
+    // Fetch Wikipedia pages for specified date
+    fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchText}&srlimit=5&format=json&origin=*`)
+        .then(response => response.json())
+        .then(data => {
+            let pageTitles = data.query.search.map(page => page.title);
+            // Fetch Wikipedia pages information
+            return Promise.all(pageTitles.map(title => fetch(`https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext&format=json&titles=${encodeURIComponent(title)}&origin=*`)));
+        })
+        .then(responses => Promise.all(responses.map(response => response.json())))
+        .then(pagesData => {
+            pagesData.forEach((pageData, index) => {
+                let page = Object.values(pageData.query.pages)[0];
+                let articleElement = document.getElementById(`article${index + 1}`);
+                articleElement.querySelector('.title').textContent = page.title;
+                articleElement.querySelector('.summary').textContent = page.extract;
+            });
+            console.log('Wikipedia pages: ', pagesData);
+        })
+        .catch(error => {
+            console.error('Error fetching Wikipedia pages:', error);
+        });
+}
+
+// Event listener for search button to fetch Wikipedia pages
+searchBtn.addEventListener('click', getWikipediaPages);
+
+searchBtn.addEventListener('click', function(){
+    headerEl.classList.remove('shadow-lg');
+    titleEl.classList.remove('text-5xl');
+    titleEl.classList.add('text-3xl');
+    newsSection.classList.remove('hide');
+});
 searchBtn.addEventListener('click', submitDate);
 
 //Saved Article section
