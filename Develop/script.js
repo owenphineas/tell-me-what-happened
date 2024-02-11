@@ -6,9 +6,8 @@ let titleEl = document.querySelector('#title');
 let newsSection = document.querySelector('#newspaper');
 //  NYT API KEY: ca099Snk2Kugzxo0Gc84kVoreQgmVbiT
 
-function getNYT(event) {
-    event.preventDefault();
-    let urlDate = document.querySelector("#date").value.replaceAll('-', '');
+function getNYT() {
+    let urlDate = dateInputEl.value.replaceAll('-', '');
     // Returns the searched year
     let searchYear = urlDate.slice(0, 4);
 
@@ -32,10 +31,23 @@ function getNYT(event) {
     })
 }
 
+function storeDate() {
+    let dateArray = JSON.parse(localStorage.getItem("savedDate")) || [];
+
+    if(dateArray.length < 5) {
+        dateArray.push(dateInputEl.value);
+    } else {
+        dateArray.shift(0);
+        dateArray.push(dateInputEl.value);
+    }
+    localStorage.setItem("savedDate", JSON.stringify(dateArray));
+}
+
 function submitDate(event){
     event.preventDefault();
+    storeDate();
     getNYT();
-    getWikipediaPages();
+    // getWikipediaPages();
 };
 
 searchBtn.addEventListener('click', function(){
