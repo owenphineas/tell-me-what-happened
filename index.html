@@ -16,11 +16,8 @@
 </head>
 <body>
     <section id="header" class="w-full shadow-lg bg-white rounded-lg mb-10 absolute">
-        <section id="savedResults" class="relative float-right mr-10 mt-5 text-green-800 text-center">
-            <form action="https://duckduckgo.com/">
-                <button id="savedResultsBtn" type="submit" class="grow font-bold"><i> Saved Articles</i></button>
-            </form>
-        </section>
+        <button id="savedResultsBtn" type="button" class="grow font-bold relative float-right mr-10 mt-5 text-green-800 text-center"><i> Saved Articles</i></button>
+
         <h1 id="title" class="font-bold clear-right font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
         <search class="flex justify-center">
                 <form id="search-bar" action="" method="get">
@@ -34,6 +31,21 @@
         </search>
         
     </section>
+
+<section id="savedResults" class=" modal hide fixed z-1 bottom-0 left-0 w-full h-2/4 bg-green-300">
+        <!-- Modal content -->
+        <div id="modal-content" class="bg-gray-400 text-white bottom-0 w-full">
+          <div>
+            <span id="close" class="close mr-3 white float-right text-4xl font-bold">&times;</span>
+          </div>
+          <div class="modal-body pl-5">
+            <p>Saved stuff here</p>
+          </div>
+        </div>
+</section>
+
+
+    
   
     <section id="newspaper" class="hide">
         <div class="nyt" id="nyt">
