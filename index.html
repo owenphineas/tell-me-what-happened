@@ -14,6 +14,7 @@
       </style>
     <title>Tell Me What Happened</title>
 </head>
+
 <body>
     <section id="header" class="w-full shadow-lg bg-white rounded-lg mb-10 absolute">
         <button id="savedResultsBtn" type="button" class="grow font-bold relative float-right mr-10 mt-5 text-green-800 text-center"><i> Saved Articles</i></button>
@@ -29,7 +30,6 @@
                     </div>
                 </form>
         </search>
-        
     </section>
 
 <div id="savedResults" class="modal hide fixed z1 bottom-0 left-0 w-full h-2/4 bg-green-300">
@@ -44,6 +44,7 @@
     </div>
 </div>
   
+<main>
     <section id="newspaper" class="hide">
         <div class="nyt" id="nyt">
             <div class="nyt" id="nyt">
@@ -71,29 +72,31 @@
         </div>
     </section>
 
- <div class="wiki hide" id="wiki">
+    <div class="wiki hide" id="wiki">
         <div><h1>Wikipedia Section for [date]:</h1></div>
         <div class="article" id="article1">
-        <h2 class="title" id="title1">Article Title</h2>
-        <p class="summary" id="summary1">Summary</p>
-    </div>
-    <div class="article" id="article2">
-        <h2 class="title" id="title2">Article Title</h2>
-        <p class="summary" id="summary2">Summary</p>
-    </div>
-    <div class="article" id="article3">
-        <h2 class="title" id="title3">Article Title</h2>
-        <p class="summary" id="summary3">Summary</p>
-    </div>
-    <div class="article" id="article4">
-        <h2 class="title" id="title4">Article Title</h2>
-        <p class="summary" id="summary4">Summary</p>
-    </div>
-    <div class="article" id="article5">
-        <h2 class="title" id="title5">Article Title</h2>
-        <p class="summary" id="summary5">Summary</p>
-    </div>
-</div>   
+            <h2 class="title" id="title1">Article Title</h2>
+            <p class="summary" id="summary1">Summary</p>
+        </div>
+        <div class="article" id="article2">
+            <h2 class="title" id="title2">Article Title</h2>
+            <p class="summary" id="summary2">Summary</p>
+        </div>
+        <div class="article" id="article3">
+            <h2 class="title" id="title3">Article Title</h2>
+            <p class="summary" id="summary3">Summary</p>
+        </div>
+        <div class="article" id="article4">
+            <h2 class="title" id="title4">Article Title</h2>
+            <p class="summary" id="summary4">Summary</p>
+        </div>
+        <div class="article" id="article5">
+            <h2 class="title" id="title5">Article Title</h2>
+            <p class="summary" id="summary5">Summary</p>
+        </div>
+    </div> 
+
+</main> 
 
 <section >
     <button id="saveThis" onclick="store()" type="button" class="hide">Save</button>

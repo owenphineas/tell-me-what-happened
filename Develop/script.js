@@ -34,7 +34,6 @@ function getNYT() {
 
 
 
-
 // Wikipedia API function
 function getWikipediaPages(event) {
     event.preventDefault();
@@ -88,7 +87,7 @@ function submitDate(event){
     event.preventDefault();
     storeDate();
     getNYT();
-    getWikipediaPages();
+    //getWikipediaPages();
 };
 
 searchBtn.addEventListener('click', function(){
@@ -108,13 +107,13 @@ searchBtn.addEventListener('click', submitDate);
 
 
 // Saved Article section
-// let saved = document.getElementById('saveThis');
+let saved = document.getElementById('saveThis');
 
-//   function store(){
-//     Will I need a prevent default here?
-//      var inputItem= document.getElementById('saveThis');
-//      localStorage.setItem('saveThis', inputItem.value);
-//     };
+function store(){
+// Will I need a prevent default here?
+    var inputItem= document.getElementById('saveThis');
+    localStorage.setItem('saveThis', inputItem.value);
+};
 
 
 //Below is code for modal 
