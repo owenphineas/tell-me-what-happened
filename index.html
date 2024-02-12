@@ -32,20 +32,17 @@
         
     </section>
 
-<section id="savedResults" class=" modal hide fixed z-1 bottom-0 left-0 w-full h-2/4 bg-green-300">
-        <!-- Modal content -->
-        <div id="modal-content" class="bg-gray-400 text-white bottom-0 w-full">
-          <div>
-            <span id="close" class="close mr-3 white float-right text-4xl font-bold">&times;</span>
-          </div>
-          <div class="modal-body pl-5">
-            <p>Saved stuff here</p>
-          </div>
-        </div>
-</section>
-
-
-    
+<div id="savedResults" class="modal hide fixed z1 bottom-0 left-0 w-full h-2/4 bg-green-300">
+    <div id="modal-content" class="modal-content bg-gray-400 text-white w-full">
+      <div class="modal-header">
+        <span id="close" class="close mr-3 white float-right text-4xl font-bold">&times;</span>
+        <h2 class="pl-5 pb-3 pt-1 text-2xl">Saved Dates:</h2>
+      </div>
+    </div>
+    <div id="savedDate" class="savedDate pl-3 pt-2">
+        <p>saved stuff here</p>
+    </div>
+</div>
   
     <section id="newspaper" class="hide">
         <div class="nyt" id="nyt">
@@ -97,8 +94,6 @@
         <p class="summary" id="summary5">Summary</p>
     </div>
 </div>   
-
-
 
 <section >
     <button id="saveThis" onclick="store()" type="button" class="hide">Save</button>
