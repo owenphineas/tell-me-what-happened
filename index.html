@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="m-0 p-0">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,17 +15,17 @@
     <title>Tell Me What Happened</title>
 </head>
 
-<body>
-    <section id="header" class="w-full shadow-lg bg-white rounded-lg mb-10 absolute">
-        <button id="savedResultsBtn" type="button" class="grow font-bold relative float-right mr-10 mt-5 text-green-800 text-center"><i> Saved Articles</i></button>
+<body class="m-0 p-0 h-screen w-screen">
+    <section id="header" class="w-full h-2/4 shadow-lg bg-white rounded-lg mb-10">
+        <button id="savedResultsBtn" type="button" class="grow font-bold float-right mr-10 mt-5 text-green-800 text-center"><i> Saved Articles</i></button>
 
         <h1 id="title" class="font-bold clear-right font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
-        <search class="flex justify-center">
+        <search id="search" class="clearfix flex justify-center">
                 <form id="search-bar" action="" method="get">
                     <div class="mb-10 border-2 border-green-400 border-solid rounded-md">
                     <input id="date" type="date" placeholder="Search" name="year">
                     </div>
-                    <div class="mb-10 ml-5 border-2 border-green-400 border-solid rounded-md text-center">
+                    <div class=" mb-10 ml-5 border-2 border-green-400 border-solid rounded-md text-center">
                         <button id="search-button" type="submit"><i >Submit</i></button>
                     </div>
                 </form>
@@ -44,8 +44,8 @@
     </div>
 </div>
   
-<main>
-    <section id="newspaper" class="hide">
+<main id="results" class=" hide pt-10 h-full w-full ">
+    <section id="newspaper" class=" float-right mr-5">
         <div class="nyt" id="nyt">
             <div class="nyt" id="nyt">
                 <h1 id="titleNYT">New York Times Articles from this day:</h1>
@@ -72,7 +72,7 @@
         </div>
     </section>
 
-    <div class="wiki hide" id="wiki">
+    <div id="wiki" class="wiki float-left ml-5" >
         <div><h1>Wikipedia Section for [date]:</h1></div>
         <div class="article" id="article1">
             <h2 class="title" id="title1">Article Title</h2>

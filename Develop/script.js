@@ -3,6 +3,8 @@ let searchBtn = document.getElementById('search-button');
 let dateInputEl = document.querySelector('#date');
 let headerEl = document.querySelector('#header');
 let titleEl = document.querySelector('#title');
+let searchEl = document.getElementById('search');
+let resultsSection = document.getElementById('results');
 let newsSection = document.querySelector('#newspaper');
 //  NYT API KEY: ca099Snk2Kugzxo0Gc84kVoreQgmVbiT
 
@@ -95,8 +97,12 @@ searchBtn.addEventListener('click', function(){
     headerEl.classList.add('max-h-40');
     titleEl.classList.remove('text-5xl');
     titleEl.classList.add('text-3xl');
-    newsSection.classList.remove('hide');
-    wiki.classList.remove('hide');
+    //searchEl.classList.remove('justify-center');
+    //searchEl.classList.add('float-left');
+    //searchEl.classList.add('ml-5');
+    //searchEl.classList.add('t-0');
+    resultsSection.classList.remove('hide');
+    
     
 });
 
