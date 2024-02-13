@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+  }
+
 .hide {
     display: none;
 }
@@ -11,6 +15,8 @@
     };
 
 
+
+
     /* Below is modal */
 #savedResults {
     overflow: auto;
@@ -22,8 +28,8 @@
 
 #modal-content {
     position: fixed;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4);
     -webkit-animation-name: slideIn;
     -webkit-animation-duration: 0.4s;
     animation-name: slideIn;
@@ -59,3 +65,7 @@
     to {opacity: 1}
   }
 
+/* Below is for testing purposes */
+#results{
+    background-color:aquamarine;
+}
