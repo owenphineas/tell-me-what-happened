@@ -89,14 +89,14 @@ function getWikipediaPages(event) {
                 let url = `https://en.wikipedia.org/wiki/${encodeURIComponent(page.title.replace(/ /g, '_'))}`;
                 let link = document.createElement('a');
                 link.href = url;
-                link.textContent = 'Read more';
+                link.textContent = ' Read more';
                 link.target = '_blank';
                  // Adding Tailwind CSS classes to make the anchor tag blue
                 link.classList.add('text-blue-500', 'hover:underline');
                 articleElement.querySelector('.title').appendChild(link);
                 
-                // Display only the first paragraph or limit to 300 characters
-                let summary = page.extract.substring(0, 400); // Limit to 300 characters
+                // Display only 400 characters fo summary
+                let summary = page.extract.substring(0, 400);
                 articleElement.querySelector('.summary').textContent = summary + '...';
             });
             console.log('Wikipedia pages: ', pagesData);
