@@ -2,6 +2,7 @@
     box-sizing: border-box;
   }
 
+  /* Below are special properties */
 .hide {
     display: none;
 }
@@ -17,7 +18,7 @@
 
 
 
-    /* Below is modal */
+    /* Below is the modal */
 #savedResults {
     overflow: auto;
     -webkit-animation-name: fadeIn;
@@ -44,7 +45,7 @@
   }
   
 
-  /* Add Animation */
+  /* Below should add animation */
   @-webkit-keyframes slideIn {
     from {bottom: -300px; opacity: 0} 
     to {bottom: 0; opacity: 1}
@@ -66,6 +67,6 @@
   }
 
 /* Below is for testing purposes */
-#results{
+/* #results{
     background-color:aquamarine;
-}
+} */

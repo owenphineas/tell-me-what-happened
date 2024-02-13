@@ -17,7 +17,6 @@ function getNYT() {
     } else {
         newsType = "&facet=true&facet_fields=type_of_material&fq=news"
     };
-
     let nytURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=" + urlDate + "&end_date=" + urlDate + newsType + "&page=1&sort=relevance&api-key=ca099Snk2Kugzxo0Gc84kVoreQgmVbiT";
     fetch(nytURL)
     .then(function (response) {
@@ -32,8 +31,7 @@ function getNYT() {
 }
 
 // Wikipedia API function
-function getWikipediaPages(event) {
-    event.preventDefault();
+function getWikipediaPages() {
     // Get the selected date from user input
     let searchText = dateInputEl.value.trim();
     console.log('Fetching Wikipedia pages for:', searchText);
@@ -102,24 +100,43 @@ function displayDates() {
     }
 }
 
+//Sends alert if user hasn't submitted a date
+function checkForm() {
+    const submittedForm = document.getElementById('date').value;
+    if (submittedForm == "" || submittedForm == null) {
+      alert("You have not selected a date"), resultsSection.classList.add('hide');
+      return;
+    }
+
+};
+
+//Calls all relevant functions when date is submitted
 function submitDate(event){
     event.preventDefault();
     storeDate();
     getNYT();
-
-    // getWikipediaPages();
     getWikipediaPages();
-
+    checkForm()
 };
 
+//Handles style changes when date is submitted to accommodate the results
 searchBtn.addEventListener('click', function(){
     headerEl.classList.remove('shadow-lg');
     headerEl.classList.add('max-h-40');
     titleEl.classList.remove('text-5xl');
+    titleEl.classList.remove('mb-10');
+    titleEl.classList.add('mb-3');
+    titleEl.classList.remove('mt-10');
+    titleEl.classList.add('mt-3');
     titleEl.classList.add('text-3xl');
+    searchBar.firstElementChild.classList.remove('mb-10');
+    searchBar.firstElementChild.classList.add('mb-2');
+    resultsSection.classList.remove('hide');
+    //searchEl.classList.remove('justify-center');
+    //searchEl.classList.add('float-left');
+    //searchEl.classList.add('t-0');
     newsSection.classList.remove('hide');
     wiki.classList.remove('hide');
-    
 });
 
 // Event listener for search button to fetch Wikipedia pages
@@ -133,11 +150,9 @@ searchBtn.addEventListener('click', function(){
 });
 searchBtn.addEventListener('click', submitDate);
 
-
 searchBtn.addEventListener('click', submitDate);
 
-
-//Below is code for modal 
+//Below is the modal code 
 var modal = document.getElementById('savedResults');
 var modalBtn = document.getElementById('savedResultsBtn');
 var span = document.getElementById('close');
@@ -147,13 +162,18 @@ modalBtn.addEventListener('click', function(){
     modal.classList.add('block');
     displayDates();
 });
-
-span.addEventListener('click', function() {
-    modal.style.display = 'none';
-});
-
 close.addEventListener('click', function(){
     modal.classList.add('hide');
     modal.classList.remove('block');
 });
+
+
+// Below is code that SHOULD allow user to click outside of modal to close it.
+// window.addEventListener('click', function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = 'hide';
+//     }
+// });
+
 }
+
