@@ -1,7 +1,7 @@
 # Tell Me What Happened
 
 ## Overview
-Tell Me What Happened is a web application that allows users to enter a date and retrieve information about events that occurred on that date. The application utilizes the Wikipedia and New York Times APIs to provide users with a comprehensive view of historical events, news articles, and first-person accounts associated with the selected date. The New York Times API is restricted to dates after the founding of the publication in 1851, ensuring relevant search results.
+Curious about what went down on your birthday or any other day? Check out Tell Me What Happened! The webpage taps into both the New York Times and Wikipedia APIs. You can see headlines from the New York Times and compare them with all the other notable stuff, acocording to Wikipedia. Simply search and get the scoop on any date you'd like.
 
 ## Functionality
 - **Date Search**: Users can enter a date into the application.
