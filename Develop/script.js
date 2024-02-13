@@ -141,7 +141,7 @@ function getWikipediaPages(event) {
                 link.href = url;
                 link.textContent = ' Read more';
                 link.target = '_blank';
-                 // Adding Tailwind CSS classes to make the anchor tag blue
+                 // Added Tailwind to make the anchor tag blue
                 link.classList.add('text-blue-500', 'hover:underline');
                 articleElement.querySelector('.title').appendChild(link);
                 
@@ -156,6 +156,7 @@ function getWikipediaPages(event) {
         });
 }
 
+
 // Event listener for search button to fetch Wikipedia pages
 searchBtn.addEventListener('click', getWikipediaPages);
 
@@ -167,14 +168,8 @@ searchBtn.addEventListener('click', function(){
 });
 searchBtn.addEventListener('click', submitDate);
 
-// Saved Article section
-// let saved = document.getElementById('saveThis');
 
-//   function store(){
-//     Will I need a prevent default here?
-//      var inputItem= document.getElementById('saveThis');
-//      localStorage.setItem('saveThis', inputItem.value);
-//     };
+searchBtn.addEventListener('click', submitDate);
 
 
 //Below is code for modal 
@@ -192,9 +187,8 @@ span.addEventListener('click', function() {
     modal.style.display = 'none';
 });
 
-// Below is code that SHOULD allow user to click outside of modal to close it.
-// window.addEventListener('click', function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = 'none';
-//     }
-// });
+close.addEventListener('click', function(){
+    modal.classList.add('hide');
+    modal.classList.remove('block');
+});
+}

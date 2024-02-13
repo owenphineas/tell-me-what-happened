@@ -9,7 +9,6 @@ Tell Me What Happened is a web application that allows users to enter a date and
 - **New York Times Integration**: Users can access news articles and first-person accounts from the New York Times API for the specified date.
 
 ## Technologies
-
 - HTML
 - Javascript
 - CSS
