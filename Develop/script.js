@@ -82,10 +82,10 @@ function storeDate() {
 
 // Displays the last five searched dates in the modal as links
 function displayDates() {
-    let modalBody = document.querySelector(".modal-body");
+    let modalDates = document.querySelector("#savedDate");
     for(i = 0; i < dateArray.length; i++) {
-        modalBody.children[i].textContent = dateArray[i];
-        modalBody.children[i].addEventListener('click', function() {
+        modalDates.children[i].textContent = dateArray[i];
+        modalDates.children[i].addEventListener('click', function() {
             console.log(this.innerHTML);
             dateInputEl.value = this.innerHTML;
         })
