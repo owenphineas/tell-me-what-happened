@@ -16,9 +16,11 @@
 </head>
 
 <body class="m-0 p-0 h-screen w-screen">
+<!--Header-->
     <section id="header" class="w-full h-2/4 shadow-lg bg-white rounded-lg mb-10 top-0 right-0 left-0">
-        <button id="savedResultsBtn" type="button" class="grow font-bold float-right mr-10 mt-5 text-green-800 text-center"><i> Saved Articles</i></button>
-
+    <!--Saved Results button-->
+        <button id="savedResultsBtn" type="button" class="grow font-bold float-right mr-10 mt-5 text-green-800 text-center"><i> Saved Results</i></button>
+    <!--Title and searchbar section-->
         <h1 id="title" class="font-bold clear-right font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
         <search id="search" class="flex justify-center">
                 <form id="search-bar" action="" method="get">
@@ -31,6 +33,7 @@
                 </form>
         </search>
     </section>
+    <!--Section for the modal which stores saved dates-->
 <div id="savedResults" class="modal hide fixed z1 bottom-0 left-0 w-full h-2/4 bg-green-300">
     <div id="modal-content" class="modal-content bg-gray-400 text-white w-full">
       <div class="modal-header">
@@ -38,6 +41,7 @@
         <h2 class="pl-5 pb-3 pt-1 text-2xl">Saved Dates:</h2>
       </div>
     </div>
+    <!--Empty section for dates to be saved into-->
     <div id="savedDate" class="savedDate pl-3 pt-2">
         <p></p>
         <p></p>
@@ -46,10 +50,9 @@
         <p></p>
     </div>
 </div>
-
-  
+  <!--New York Times section-->
 <main id="results" class=" hide pt-10 h-full w-full ">
-    <section id="newspaper" class=" float-right mr-5 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <section id="newspaper" class=" float-right mr-5">
         <div class="nyt" id="nyt">
             <div class="nyt" id="nyt">
                 <h1 id="titleNYT">New York Times Articles from this day:</h1>
@@ -75,7 +78,7 @@
             </div>
         </div>
     </section>
-
+        <!--Wikipedia section-->
     <div id="wiki" class="wiki float-left ml-5" >
         <div><h1>Wikipedia Section for [date]:</h1></div>
         <div class="article" id="article1">
@@ -99,15 +102,7 @@
             <p class="summary" id="summary5">Summary</p>
         </div>
     </div> 
-
 </main> 
-
-<section >
-    <button id="saveThis" onclick="store()" type="button" class="hide">Save</button>
-<div id="savedContainer">
-
-</div>
-</section>
 
 <script src="Develop/script.js"></script>
 </body>

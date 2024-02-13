@@ -20,8 +20,6 @@ function getNYT() {
     } else {
         newsType = "&facet=true&facet_fields=type_of_material&fq=news"
     };
-    
-
     let nytURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=" + urlDate + "&end_date=" + urlDate + newsType + "&page=1&sort=relevance&api-key=ca099Snk2Kugzxo0Gc84kVoreQgmVbiT";
     fetch(nytURL)
     .then(function (response) {
@@ -36,8 +34,7 @@ function getNYT() {
 }
 
 // Wikipedia API function
-function getWikipediaPages(event) {
-    event.preventDefault();
+function getWikipediaPages() {
     // Get the selected date from user input
     let searchText = dateInputEl.value.trim();
     console.log('Fetching Wikipedia pages for:', searchText);
@@ -93,44 +90,48 @@ function displayDates() {
     }
 }
 
+//Sends alert if user hasn't submitted a date
+function checkForm() {
+    const submittedForm = document.getElementById('date').value;
+    if (submittedForm == "" || submittedForm == null) {
+      alert("You have not selected a date"), resultsSection.classList.add('hide');
+      return;
+    }
+
+};
+
+//Calls all relevant functions when date is submitted
 function submitDate(event){
     event.preventDefault();
     storeDate();
     getNYT();
     getWikipediaPages();
+    checkForm()
 };
 
+//Handles style changes when date is submitted to accommodate the results
 searchBtn.addEventListener('click', function(){
     headerEl.classList.remove('shadow-lg');
     headerEl.classList.add('max-h-40');
     titleEl.classList.remove('text-5xl');
+    titleEl.classList.remove('mb-10');
+    titleEl.classList.add('mb-3');
+    titleEl.classList.remove('mt-10');
+    titleEl.classList.add('mt-3');
     titleEl.classList.add('text-3xl');
+    searchBar.firstElementChild.classList.remove('mb-10');
+    searchBar.firstElementChild.classList.add('mb-2');
+    resultsSection.classList.remove('hide');
     //searchEl.classList.remove('justify-center');
     //searchEl.classList.add('float-left');
-    //searchEl.classList.add('mt-0');
     //searchEl.classList.add('t-0');
-    resultsSection.classList.remove('hide');
-    
-    
 });
 
 
 searchBtn.addEventListener('click', submitDate);
 
 
-
-
-// Saved Article section
-let saved = document.getElementById('saveThis');
-
-function store(){
-// Will I need a prevent default here?
-    var inputItem= document.getElementById('saveThis');
-    localStorage.setItem('saveThis', inputItem.value);
-};
-
-
-//Below is code for modal 
+//Below is the modal code 
 var modal = document.getElementById('savedResults');
 var modalBtn = document.getElementById('savedResultsBtn');
 var close = document.getElementById('close');
@@ -140,7 +141,6 @@ modalBtn.addEventListener('click', function(){
     modal.classList.add('block');
     displayDates();
 });
-
 close.addEventListener('click', function(){
     modal.classList.add('hide');
     modal.classList.remove('block');
@@ -152,12 +152,6 @@ close.addEventListener('click', function(){
 //         modal.style.display = 'hide';
 //     }
 // });
-
-
-if(possibleCharacters.length === 0) {
-    alert("You did not select anything. You must select a date.");
-    return password
-  }
 
 
 
