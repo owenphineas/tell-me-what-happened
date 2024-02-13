@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="m-0 p-0">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,97 +14,76 @@
       </style>
     <title>Tell Me What Happened</title>
 </head>
-
-<body class="m-0 p-0 h-screen w-screen">
-    <section id="header" class="w-full h-2/4 shadow-lg bg-white rounded-lg mb-10">
-        <button id="savedResultsBtn" type="button" class="grow font-bold float-right mr-10 mt-5 text-green-800 text-center"><i> Saved Articles</i></button>
+<body>
+    <section id="header" class="w-full shadow-lg bg-white rounded-lg mb-10 absolute top-0 left-0 right-0">
+        <button id="savedResultsBtn" type="button" class="grow font-bold relative float-right mr-10 mt-5 text-green-800 text-center"><i> Saved Articles</i></button>
 
         <h1 id="title" class="font-bold clear-right font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
-        <search id="search" class="clearfix flex justify-center">
+        <search class="flex justify-center">
                 <form id="search-bar" action="" method="get">
                     <div class="mb-10 border-2 border-green-400 border-solid rounded-md">
                     <input id="date" type="date" placeholder="Search" name="year">
                     </div>
-                    <div class=" mb-10 ml-5 border-2 border-green-400 border-solid rounded-md text-center">
+                    <div class="mb-10 ml-5 border-2 border-green-400 border-solid rounded-md text-center">
                         <button id="search-button" type="submit"><i >Submit</i></button>
                     </div>
                 </form>
         </search>
     </section>
 
-<div id="savedResults" class="modal hide fixed z1 bottom-0 left-0 w-full h-2/4 bg-green-300">
-    <div id="modal-content" class="modal-content bg-gray-400 text-white w-full">
-      <div class="modal-header">
-        <span id="close" class="close mr-3 white float-right text-4xl font-bold">&times;</span>
-        <h2 class="pl-5 pb-3 pt-1 text-2xl">Saved Dates:</h2>
-      </div>
-    </div>
-    <div id="savedDate" class="savedDate pl-3 pt-2">
-        <p>saved stuff here</p>
-    </div>
-</div>
-  
-<main id="results" class=" hide pt-10 h-full w-full ">
-    <section id="newspaper" class=" float-right mr-5">
-        <div class="nyt" id="nyt">
-            <div class="nyt" id="nyt">
-                <h1 id="titleNYT">New York Times Articles from this day:</h1>
-            <div class="story" id="story1">
-                <h2 class="headline" id="headline1">Headline</h2>
-                <p class="blurb" id="blurb1">blurb</p>
+    <section id="news" class="mt-32">
+        <section id="newspaper" class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div class="story bg-white rounded-lg p-4 shadow-md" id="story1">
+                <h2 class="headline font-bold text-lg mb-2" id="headline1">Headline</h2>
+                <p class="blurb text-gray-700" id="blurb1">blurb</p>
             </div>
-            <div class="story" id="story2">
-                <h2 class="headline" id="headline2">Headline</h2>
-                <p class="blurb" id="blurb2">blurb</p>
+            <div class="story bg-white rounded-lg p-4 shadow-md" id="story2">
+                <h2 class="headline font-bold text-lg mb-2" id="headline2">Headline</h2>
+                <p class="blurb text-gray-700" id="blurb2">blurb</p>
             </div>
-            <div class="story" id="story3">
-                <h2 class="headline" id="headline3">Headline</h2>
-                <p class="blurb" id="blurb3">blurb</p>
+            <div class="story bg-white rounded-lg p-4 shadow-md" id="story3">
+                <h2 class="headline font-bold text-lg mb-2" id="headline3">Headline</h2>
+                <p class="blurb text-gray-700" id="blurb3">blurb</p>
             </div>
-            <div class="story" id="story4">
-                <h2 class="headline" id="headline4">Headline</h2>
-                <p class="blurb" id="blurb4">blurb</p>
+            <div class="story bg-white rounded-lg p-4 shadow-md" id="story4">
+                <h2 class="headline font-bold text-lg mb-2" id="headline4">Headline</h2>
+                <p class="blurb text-gray-700" id="blurb4">blurb</p>
             </div>
-            <div class="story" id="story5">
-                <h2 class="headline" id="headline5">Headline</h2>
-                <p class="blurb" id="blurb5">blurb</p>
+            <div class="story bg-white rounded-lg p-4 shadow-md" id="story5">
+                <h2 class="headline font-bold text-lg mb-2" id="headline5">Headline</h2>
+                <p class="blurb text-gray-700" id="blurb5">blurb</p>
             </div>
-        </div>
+        </section>
+    
+        <section class="wiki grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div class="article bg-white rounded-lg p-4 shadow-md" id="article1">
+                <h2 class="title font-bold text-lg mb-2" id="title1">Article Title</h2>
+                <p class="summary text-gray-700" id="summary1">Summary</p>
+            </div>
+            <div class="article bg-white rounded-lg p-4 shadow-md" id="article2">
+                <h2 class="title font-bold text-lg mb-2" id="title2">Article Title</h2>
+                <p class="summary text-gray-700" id="summary2">Summary</p>
+            </div>
+            <div class="article bg-white rounded-lg p-4 shadow-md" id="article3">
+                <h2 class="title font-bold text-lg mb-2" id="title3">Article Title</h2>
+                <p class="summary text-gray-700" id="summary3">Summary</p>
+            </div>
+            <div class="article bg-white rounded-lg p-4 shadow-md" id="article4">
+                <h2 class="title font-bold text-lg mb-2" id="title4">Article Title</h2>
+                <p class="summary text-gray-700" id="summary4">Summary</p>
+            </div>
+            <div class="article bg-white rounded-lg p-4 shadow-md" id="article5">
+                <h2 class="title font-bold text-lg mb-2" id="title5">Article Title</h2>
+                <p class="summary text-gray-700" id="summary5">Summary</p>
+            </div>
+        </section>
+    </section>
+    
+    <section>
+        <button id="saveThis" onclick="store()" type="button" class="hide">Save</button>
+        <div id="savedContainer"></div>
     </section>
 
-    <div id="wiki" class="wiki float-left ml-5" >
-        <div><h1>Wikipedia Section for [date]:</h1></div>
-        <div class="article" id="article1">
-            <h2 class="title" id="title1">Article Title</h2>
-            <p class="summary" id="summary1">Summary</p>
-        </div>
-        <div class="article" id="article2">
-            <h2 class="title" id="title2">Article Title</h2>
-            <p class="summary" id="summary2">Summary</p>
-        </div>
-        <div class="article" id="article3">
-            <h2 class="title" id="title3">Article Title</h2>
-            <p class="summary" id="summary3">Summary</p>
-        </div>
-        <div class="article" id="article4">
-            <h2 class="title" id="title4">Article Title</h2>
-            <p class="summary" id="summary4">Summary</p>
-        </div>
-        <div class="article" id="article5">
-            <h2 class="title" id="title5">Article Title</h2>
-            <p class="summary" id="summary5">Summary</p>
-        </div>
-    </div> 
-
-</main> 
-
-<section >
-    <button id="saveThis" onclick="store()" type="button" class="hide">Save</button>
-<div id="savedContainer">
-
-</div>
-</section>
-
-<script src="Develop/script.js"></script>
+    <script src="Develop/script.js"></script>
 </body>
 </html>
