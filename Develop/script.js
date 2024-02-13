@@ -100,6 +100,8 @@ function checkForm() {
 
 };
 
+
+
 //Calls all relevant functions when date is submitted
 function submitDate(event){
     event.preventDefault();
