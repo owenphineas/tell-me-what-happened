@@ -34,8 +34,6 @@ function getNYT() {
     })
 }
 
-
-
 // Wikipedia API function
 function getWikipediaPages(event) {
     event.preventDefault();
@@ -69,12 +67,9 @@ function getWikipediaPages(event) {
     });
 }
 
-// Event listener for search button to fetch Wikipedia pages
-//searchBtn.addEventListener('click', getWikipediaPages);
-
+let dateArray = JSON.parse(localStorage.getItem("savedDate")) || [];
 
 function storeDate() {
-    let dateArray = JSON.parse(localStorage.getItem("savedDate")) || [];
 
     if(dateArray.length < 5) {
         dateArray.push(dateInputEl.value);
@@ -85,11 +80,23 @@ function storeDate() {
     localStorage.setItem("savedDate", JSON.stringify(dateArray));
 }
 
+// Displays the last five searched dates in the modal as links
+function displayDates() {
+    let modalBody = document.querySelector(".modal-body");
+    for(i = 0; i < dateArray.length; i++) {
+        modalBody.children[i].textContent = dateArray[i];
+        modalBody.children[i].addEventListener('click', function() {
+            console.log(this.innerHTML);
+            dateInputEl.value = this.innerHTML;
+        })
+    }
+}
+
 function submitDate(event){
     event.preventDefault();
     storeDate();
     getNYT();
-    //getWikipediaPages();
+    getWikipediaPages();
 };
 
 searchBtn.addEventListener('click', function(){
@@ -130,6 +137,7 @@ var close = document.getElementById('close');
 modalBtn.addEventListener('click', function(){
     modal.classList.remove('hide');
     modal.classList.add('block');
+    displayDates();
 });
 
 close.addEventListener('click', function(){
@@ -137,7 +145,7 @@ close.addEventListener('click', function(){
     modal.classList.remove('block');
 });
 
-//Below is code that SHOULD allow user to click outside of modal to close it.
+// Below is code that SHOULD allow user to click outside of modal to close it.
 // window.addEventListener('click', function(event) {
 //     if (event.target == modal) {
 //         modal.style.display = 'none';
