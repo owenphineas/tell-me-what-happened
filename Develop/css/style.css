@@ -15,9 +15,6 @@
     transform: scale(1.1); 
     };
 
-
-
-
     /* Below is the modal */
 #savedResults {
     overflow: auto;
@@ -30,7 +27,7 @@
 #modal-content {
     position: fixed;
     background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.4);
     -webkit-animation-name: slideIn;
     -webkit-animation-duration: 0.4s;
     animation-name: slideIn;
@@ -44,6 +41,8 @@
     cursor: pointer;
   }
   
+
+
 
   /* Below should add animation */
   @-webkit-keyframes slideIn {
@@ -70,3 +69,4 @@
 /* #results{
     background-color:aquamarine;
 } */
+
