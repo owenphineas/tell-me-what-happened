@@ -116,8 +116,8 @@ function checkForm() {
 function submitDate(event){
     event.preventDefault();
     storeDate();
-    getNYT();
-    getWikipediaPages();
+    //getNYT();
+    //getWikipediaPages();
     checkForm()
 };
 
@@ -139,10 +139,11 @@ searchBtn.addEventListener('click', function(){
 
 searchBtn.addEventListener('click', submitDate);
 
+
 //Below is the modal code 
-var modal = document.getElementById('savedResults');
-var modalBtn = document.getElementById('savedResultsBtn');
-var span = document.getElementById('close');
+let modal = document.getElementById('savedResults');
+let modalBtn = document.getElementById('savedResultsBtn');
+let span = document.getElementById('close');
 
 modalBtn.addEventListener('click', function(){
     modal.classList.remove('hide');
@@ -157,9 +158,15 @@ closeModalBtn.addEventListener('click', function(){
 
 // Below is code that SHOULD allow user to click outside of modal to close it.
 // window.addEventListener('click', function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = 'hide';
+//     event.preventDefault();
+//     if (event.target != modal) {
+//         modal.classList.add('hide');
+//         modal.classList.remove('block');
 //     }
 // });
 
-
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//       modal.style.display = "hide";
+//     }
+//   }
