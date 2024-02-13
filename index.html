@@ -16,11 +16,11 @@
 </head>
 
 <body class="m-0 p-0 h-screen w-screen">
-    <section id="header" class="w-full h-2/4 shadow-lg bg-white rounded-lg mb-10">
+    <section id="header" class="w-full h-2/4 shadow-lg bg-white rounded-lg mb-10 top-0 right-0 left-0">
         <button id="savedResultsBtn" type="button" class="grow font-bold float-right mr-10 mt-5 text-green-800 text-center"><i> Saved Articles</i></button>
 
         <h1 id="title" class="font-bold clear-right font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
-        <search id="search" class="clearfix flex justify-center">
+        <search id="search" class="flex justify-center">
                 <form id="search-bar" action="" method="get">
                     <div class="mb-10 border-2 border-green-400 border-solid rounded-md">
                     <input id="date" type="date" placeholder="Search" name="year">
@@ -45,7 +45,7 @@
 </div>
   
 <main id="results" class=" hide pt-10 h-full w-full ">
-    <section id="newspaper" class=" float-right mr-5">
+    <section id="newspaper" class=" float-right mr-5 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <div class="nyt" id="nyt">
             <div class="nyt" id="nyt">
                 <h1 id="titleNYT">New York Times Articles from this day:</h1>

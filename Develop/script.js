@@ -20,6 +20,7 @@ function getNYT() {
     } else {
         newsType = "&facet=true&facet_fields=type_of_material&fq=news"
     };
+    
 
     let nytURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=" + urlDate + "&end_date=" + urlDate + newsType + "&page=1&sort=relevance&api-key=ca099Snk2Kugzxo0Gc84kVoreQgmVbiT";
     fetch(nytURL)
@@ -99,7 +100,7 @@ searchBtn.addEventListener('click', function(){
     titleEl.classList.add('text-3xl');
     //searchEl.classList.remove('justify-center');
     //searchEl.classList.add('float-left');
-    //searchEl.classList.add('ml-5');
+    //searchEl.classList.add('mt-0');
     //searchEl.classList.add('t-0');
     resultsSection.classList.remove('hide');
     
@@ -140,12 +141,15 @@ close.addEventListener('click', function(){
 //Below is code that SHOULD allow user to click outside of modal to close it.
 // window.addEventListener('click', function(event) {
 //     if (event.target == modal) {
-//         modal.style.display = 'none';
+//         modal.style.display = 'hide';
 //     }
 // });
 
 
-
+if(possibleCharacters.length === 0) {
+    alert("You did not select anything. You must select a date.");
+    return password
+  }
 
 
 
