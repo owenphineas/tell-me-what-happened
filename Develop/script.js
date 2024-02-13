@@ -116,19 +116,6 @@ searchBtn.addEventListener('click', function(){
 
 searchBtn.addEventListener('click', submitDate);
 
-
-
-
-// Saved Article section
-let saved = document.getElementById('saveThis');
-
-function store(){
-// Will I need a prevent default here?
-    var inputItem= document.getElementById('saveThis');
-    localStorage.setItem('saveThis', inputItem.value);
-};
-
-
 //Below is code for modal 
 var modal = document.getElementById('savedResults');
 var modalBtn = document.getElementById('savedResultsBtn');
@@ -144,17 +131,3 @@ close.addEventListener('click', function(){
     modal.classList.add('hide');
     modal.classList.remove('block');
 });
-
-// Below is code that SHOULD allow user to click outside of modal to close it.
-// window.addEventListener('click', function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = 'none';
-//     }
-// });
-
-
-
-
-
-
-
