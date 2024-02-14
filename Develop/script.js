@@ -116,8 +116,8 @@ function checkForm() {
 function submitDate(event){
     event.preventDefault();
     storeDate();
-    //getNYT();
-    //getWikipediaPages();
+    getNYT();
+    getWikipediaPages();
     checkForm()
 };
 
@@ -156,17 +156,3 @@ closeModalBtn.addEventListener('click', function(){
 });
 
 
-// Below is code that SHOULD allow user to click outside of modal to close it.
-// window.addEventListener('click', function(event) {
-//     event.preventDefault();
-//     if (event.target != modal) {
-//         modal.classList.add('hide');
-//         modal.classList.remove('block');
-//     }
-// });
-
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//       modal.style.display = "hide";
-//     }
-//   }
