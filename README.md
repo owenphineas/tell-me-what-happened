@@ -19,6 +19,9 @@ Curious about what went down on your birthday or any other day? Check out Tell M
 
 ![Tell Me What Happened2](https://github.com/owenphineas/tell-me-what-happened/assets/153241703/76a8c1b4-90e5-46f4-9e42-bbcbbfcfceda)
 
+## Link to Deployed Site
+https://owenphineas.github.io/tell-me-what-happened/
+
 ## Contributors
 - Owen Johnson (@owenphineas)
 - Martha Hayes (@mhayes0022)
