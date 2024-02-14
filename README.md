@@ -15,7 +15,9 @@ Curious about what went down on your birthday or any other day? Check out Tell M
 - Tailwind
 
 ## Demo
+![Tell Me What Happened](https://github.com/owenphineas/tell-me-what-happened/assets/153241703/d2c113bf-701e-4c9b-a500-0e848645bcbe)
 
+![Tell Me What Happened2](https://github.com/owenphineas/tell-me-what-happened/assets/153241703/76a8c1b4-90e5-46f4-9e42-bbcbbfcfceda)
 
 ## Contributors
 - Owen Johnson (@owenphineas)
