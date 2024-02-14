@@ -7,11 +7,11 @@
     display: none;
 }
 
-.grow { 
+.bigger { 
     transition: all .2s ease-in-out; 
     }
     
-    .grow:hover { 
+    .bigger:hover { 
     transform: scale(1.1); 
     };
 
@@ -41,6 +41,17 @@
     cursor: pointer;
   }
   
+
+#newspaperSectionTitle {
+  font-family:'Times New Roman', Times, serif;
+}
+
+#wikiSectionTitle {
+  font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+
+
 
 
 

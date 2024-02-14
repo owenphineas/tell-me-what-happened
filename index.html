@@ -19,16 +19,16 @@
 <!--Header-->
     <section id="header" class="w-full h-2/4 shadow-lg rounded-lg mb-10 top-0 right-0 left-0 bg-green-100">
     <!--Saved Results button-->
-        <button id="savedResultsBtn" type="button" class="grow font-bold float-right mr-10 mt-5 text-green-800 text-center"><i> Saved Results</i></button>
+        <button id="savedResultsBtn" type="button" class="bigger font-bold float-right mr-10 mt-5 text-green-800 text-center"><i> Saved Results</i></button>
     <!--Title and searchbar section-->
         <h1 id="title" class="font-bold clear-right font-sans underline text-center text-5xl mb-10 mt-10"> Tell Me What Happened!</h1>
         <search id="search" class="flex justify-center">
                 <form id="search-bar" action="" method="get">
-                    <div class="grow mb-10 border-2 border-green-700 border-solid rounded-md">
+                    <div class="bigger mb-10 border-2 border-green-700 border-solid rounded-md">
                     <input id="date" type="date" placeholder="Search" name="year">
                     </div>
-                    <div class=" grow mb-10 ml-5 border-2 border-green-700 bg-white border-solid rounded-md text-center">
-                        <button id="search-button" type="submit"><i >Submit</i></button>
+                    <div class=" bigger mb-10 ml-5 border-2 border-green-700 bg-white border-solid rounded-md text-center">
+                        <button id="search-button" type="submit"><i>Submit</i></button>
                     </div>
                 </form>
         </search>
@@ -39,21 +39,22 @@
     <div id="modal-content" class="modal-content bg-gray-400 text-white w-full">
       <div class="modal-header">
         <span id="close" class="close mr-3 white float-right text-4xl font-bold">&times;</span>
-        <h2 class="pl-5 pb-3 pt-1 text-2xl">Saved Dates:</h2>
+        <h2 class="pl-5 pb-3 pt-1 text-2xl"><i>Saved Dates:</i></h2>
       </div>
     </div>
     <!--Empty section for dates to be saved into-->
-    <div id="savedDate" class="savedDate pl-3 pt-2">
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
+    <div id="savedDate" class="savedDate cursor-pointer pl-3 pt-4 ml-10">
+        <p class="mb-3"></p>
+        <p class="mb-3"></p>
+        <p class="mb-3"></p>
+        <p class="mb-3"></p>
+        <p class="mb-3"></p>
     </div>
 </div>
 
   <!--New York Times section-->
-<main id="results" class=" hide pt-10 h-full w-full mb-3">
+<main id="results" class="hide pt-10 h-full w-full mb-3 bg-gray-100">
+    <h1 id="newspaperSectionTitle" class="text-center text-3xl clear-right mb-3 text-green-700">New York Times</h1>
         <section id="newspaper" class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-10 ml-3 mr-3">
             <div class="story bg-white rounded-lg p-4 shadow-md" id="story1">
                 <h2 class="headline font-bold text-lg mb-2" id="headline1">Headline</h2>
@@ -77,6 +78,7 @@
             </div>
         </section>
      <!--Wikipedia section-->
+     <h1 id="wikiSectionTitle" class="text-center text-3xl clear-right mb-3 text-green-700">Wikipedia</h1>
         <section id="wiki" class="wiki grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ml-3 mr-3">
             <div class="article bg-white rounded-lg p-4 shadow-md" id="article1">
                 <h2 class="title font-bold text-lg mb-2" id="title1">Article Title</h2>
